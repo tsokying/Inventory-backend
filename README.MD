@@ -26,8 +26,6 @@ the application with run on port 8080 by default
 ### Development daily:
 * The app in NOT completed
 
-learn / think / try / develop
-
 1) Day one: 
 * Try to design the database structure. [(current design)](https://docs.google.com/spreadsheets/d/1zuuDitgCd5jsAlSqjQahva1uXUs8r5ohqWGWttBjfJY/edit?usp=sharing)
 * Learn and study OneToMany, ManyToOne, ManyToMany relations in JPA. (and fail to use them)
@@ -47,7 +45,3 @@ learn / think / try / develop
 * Failing to convert "bootstrap-table" into React Component.
 * Redsign the table with "react-bootstrap-table2".
 * Setting up Redux's store, actions and reducers.
-
-4) Day Four:
-* Implement csv files uploading (frontend).
-* Button send APIs to CRUD datas.
