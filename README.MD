@@ -1,6 +1,6 @@
 # Inventory System (v1.0) - Backend
 Backend part of Inventory System (v1.0) in Java (Spring Boot)<br>
-Frontedn part: [Here](https://github.com/tsokying/Inventory-backend)
+Frontend part: [Here](https://github.com/tsokying/Inventory-backend)
 
 ### Introduction
 1) An Inventory Management System with CRUD functions, mainly for tables of "Stock", "Product" and "Location" (Shop).
