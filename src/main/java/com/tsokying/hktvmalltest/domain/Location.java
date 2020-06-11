@@ -20,6 +20,7 @@ public class Location {
     private long locationId;
 
     private String locationName;
+    private String locationCode;
     private String locationType;
     private int manager_id;
     private int supervisor_id;
