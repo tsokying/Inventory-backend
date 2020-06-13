@@ -1,6 +1,6 @@
 package com.tsokying.hktvmalltest.controller;
 
-import com.tsokying.hktvmalltest.domain.Package;
+import com.tsokying.hktvmalltest.model.Package;
 import com.tsokying.hktvmalltest.service.PackageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

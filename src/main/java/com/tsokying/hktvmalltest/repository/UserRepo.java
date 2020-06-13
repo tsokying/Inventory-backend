@@ -1,6 +1,6 @@
 package com.tsokying.hktvmalltest.repository;
 
-import com.tsokying.hktvmalltest.domain.User;
+import com.tsokying.hktvmalltest.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.tsokying.hktvmalltest.domain;
+package com.tsokying.hktvmalltest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,6 +1,6 @@
 package com.tsokying.hktvmalltest.service;
 
-import com.tsokying.hktvmalltest.domain.Product;
+import com.tsokying.hktvmalltest.model.Product;
 import com.tsokying.hktvmalltest.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

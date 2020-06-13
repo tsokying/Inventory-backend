@@ -1,6 +1,6 @@
 package com.tsokying.hktvmalltest.service;
 
-import com.tsokying.hktvmalltest.domain.Location;
+import com.tsokying.hktvmalltest.model.Location;
 import com.tsokying.hktvmalltest.repository.LocationRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

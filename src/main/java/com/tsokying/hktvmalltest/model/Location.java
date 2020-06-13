@@ -1,4 +1,4 @@
-package com.tsokying.hktvmalltest.domain;
+package com.tsokying.hktvmalltest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,21 +9,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
-public class User {
+public class Location {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long userId;
+    private long locationId;
 
-    @NotBlank(message = "Employee code cannot be blank")
-    private String employeeCode;
-    private String password;
-    private String firstName;
-    private String lastName;
+    private String locationName;
+    private String locationCode;
+    private String locationType;
+    private int manager_id;
+    private int supervisor_id;
 
 }

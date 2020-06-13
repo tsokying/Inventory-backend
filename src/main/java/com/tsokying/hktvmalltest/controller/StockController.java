@@ -1,6 +1,7 @@
 package com.tsokying.hktvmalltest.controller;
 
-import com.tsokying.hktvmalltest.domain.Stock;
+import com.tsokying.hktvmalltest.model.DTO.StockInfo;
+import com.tsokying.hktvmalltest.model.Stock;
 import com.tsokying.hktvmalltest.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -36,7 +37,7 @@ public class StockController {
     }
 
     @GetMapping("/all")
-    public Iterable<Stock> getAllProduct(){
+    public Iterable<StockInfo> getAllProduct(){
         return stockService.findAllStock();
     }
 

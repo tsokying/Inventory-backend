@@ -1,4 +1,4 @@
-package com.tsokying.hktvmalltest.domain;
+package com.tsokying.hktvmalltest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,16 +13,13 @@ import javax.persistence.Id;
 @Entity
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
-public class Location {
+public class Stock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long stockId;
     private long locationId;
-
-    private String locationName;
-    private String locationCode;
-    private String locationType;
-    private int manager_id;
-    private int supervisor_id;
+    private long productId;
+    private int stockQty;
 
 }

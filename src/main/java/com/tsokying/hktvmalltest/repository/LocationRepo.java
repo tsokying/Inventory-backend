@@ -1,6 +1,6 @@
 package com.tsokying.hktvmalltest.repository;
 
-import com.tsokying.hktvmalltest.domain.Location;
+import com.tsokying.hktvmalltest.model.Location;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
