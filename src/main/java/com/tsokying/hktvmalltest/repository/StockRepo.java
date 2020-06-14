@@ -14,6 +14,6 @@ public interface StockRepo extends JpaRepository<Stock, Long> {
     List<Stock> findByProductId(Long productId);
     List<Stock> findByLocationId(Long locationId);
 
-    @Query("SELECT new com.tsokying.hktvmalltest.model.DTO.StockInfo (s.stockId, s.locationId, l.locationCode, l.locationName, s.productId, p.name, s.stockQty) FROM Stock s JOIN Product p ON s.productId = p.productId JOIN Location l ON s.locationId = l.locationId")
+    @Query("SELECT new com.tsokying.hktvmalltest.model.DTO.StockInfo (s.stockId, s.locationId, l.locationCode, l.locationName, s.productId, p.name, s.stockQty) FROM Stock s JOIN Product p ON s.productId = p.productId JOIN Location l ON s.locationId = l.locationId ORDER BY s.stockId asc")
     List<StockInfo>  getAllInfo();
 }
