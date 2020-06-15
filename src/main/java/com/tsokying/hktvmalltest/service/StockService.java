@@ -1,10 +1,12 @@
 package com.tsokying.hktvmalltest.service;
 
-import com.tsokying.hktvmalltest.model.DTO.StockInfo;
 import com.tsokying.hktvmalltest.model.Stock;
+import com.tsokying.hktvmalltest.repository.DTO.StockInfo;
 import com.tsokying.hktvmalltest.repository.StockRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class StockService {
@@ -16,20 +18,12 @@ public class StockService {
         return stockRepo.save(stock);
     }
 
-    public Iterable<Stock> saveAllStock(Iterable<Stock> stockIterable) {
-        return stockRepo.saveAll(stockIterable);
-    }
+    public void saveAll (List stockList) {
+        stockRepo.saveAll(stockList);
+    };
 
     public Iterable<StockInfo> findAllStock() {
         return stockRepo.getAllInfo();
-    }
-
-    public Iterable<Stock> findStockByProduct(Long productId) {
-        return stockRepo.findByProductId(productId);
-    }
-
-    public Iterable<Stock> findStockByLocation(Long locationId) {
-        return stockRepo.findByLocationId(locationId);
     }
 
     public Stock findStockById(Long stockId) {

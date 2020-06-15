@@ -5,6 +5,8 @@ import com.tsokying.hktvmalltest.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductService {
 
@@ -15,9 +17,10 @@ public class ProductService {
         return productRepo.save(product);
     }
 
-    public Iterable<Product> saveAllProduct(Iterable<Product> productIterable) {
-        return productRepo.saveAll(productIterable);
-    }
+    public void saveAll (List prodcutList) {
+        productRepo.saveAll(prodcutList);
+    };
+
 
     public Iterable<Product> findAllProduct() {
         return productRepo.findAll();

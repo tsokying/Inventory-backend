@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Getter @Setter
@@ -19,8 +18,6 @@ public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long stockId;
-
-    @NotBlank(message = "Location id cannot be blank")
     private long locationId;
     private long productId;
     private int stockQty;

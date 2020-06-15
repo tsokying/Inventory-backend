@@ -31,8 +31,8 @@ public class ProductController {
     }
 
     @PostMapping(value = "/upload", consumes = "multipart/form-data")
-    public void uploadMultipart(@RequestParam("file") MultipartFile file) throws IOException {
-        productService.saveAllProduct(CsvUtils.read(Product.class, file.getInputStream()));
+    public void uploadProductData(@RequestParam("file") MultipartFile file) throws IOException {
+        productService.saveAll(CsvUtils.read(Product.class, file.getInputStream()));
     }
 
     @GetMapping("/all")

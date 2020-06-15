@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Getter @Setter
@@ -23,8 +24,10 @@ public class Product {
     @NotBlank(message = "Product name cannot be blank")
     private String name;
 
-    @NotBlank(message = "Product code cannot be blank")
+    @Pattern(regexp = "[A-Z]{2}-[A-Z]{2,4}[0-9]{2,4}", message = "Product Code's format is not correct")
     private String code;
+
+    private double weight;
 
     private String status;
 

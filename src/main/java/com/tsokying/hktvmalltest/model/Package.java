@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Getter @Setter
@@ -19,9 +20,10 @@ public class Package {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long packageId;
 
+    @NotEmpty
     private long product_id;
     private int packageQty;
-    private double weight;
+    private double PackageWeight;
     private String dimension;
     private String Status;
     private long fromLocation;
