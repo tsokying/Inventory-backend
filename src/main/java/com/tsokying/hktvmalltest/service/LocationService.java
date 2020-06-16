@@ -12,7 +12,6 @@ public class LocationService {
 
     @Autowired
     private LocationRepo locationRepo;
-
     public Location addOrUpdateLocation(Location location) {
         return locationRepo.save(location);
     }
