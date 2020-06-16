@@ -19,7 +19,8 @@ Frontend part: [Here](https://github.com/tsokying/Inventory-frontend)
 with [maven installed](https://www.mkyong.com/maven/how-to-install-maven-in-windows/)
 ```sh
 $ cd Inventory-backend
-$ mvn spring-boot: run
+($ mvn install)
+$ mvn spring-boot: run   or $ java -jar target\hktvmalltest-0.0.1-SNAPSHOT.jar
 ```
 the application with run on port 8080 by default
 
