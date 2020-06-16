@@ -22,7 +22,7 @@ public class Location {
     private String locationName;
     private String locationCode;
     private String locationType;
-    private int manager_id;
-    private int supervisor_id;
+    //private int manager_id;
+    //private int supervisor_id;
 
 }

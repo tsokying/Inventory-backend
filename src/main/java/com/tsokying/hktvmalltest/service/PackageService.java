@@ -16,7 +16,7 @@ public class PackageService {
     }
 
     public Iterable<Package> findAllPackage() {
-        return packageRepo.findAll();
+        return packageRepo.findAllByOrderByPackageIdAsc();
     }
 
     public Package findPackageById(Long id) {

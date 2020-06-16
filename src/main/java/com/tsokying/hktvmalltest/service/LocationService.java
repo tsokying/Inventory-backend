@@ -5,6 +5,8 @@ import com.tsokying.hktvmalltest.repository.LocationRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LocationService {
 
@@ -15,8 +17,12 @@ public class LocationService {
         return locationRepo.save(location);
     }
 
+    public void saveAll (List locationList) {
+        locationRepo.saveAll(locationList);
+    };
+
     public Iterable<Location> findAllLocation() {
-        return locationRepo.findAll();
+        return locationRepo.findAllByOrderByLocationIdAsc();
     }
 
     public Location findLocationById(Long id) {

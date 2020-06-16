@@ -17,13 +17,12 @@ public class ProductService {
         return productRepo.save(product);
     }
 
-    public void saveAll (List prodcutList) {
-        productRepo.saveAll(prodcutList);
+    public void saveAll (List productList) {
+        productRepo.saveAll(productList);
     };
 
-
     public Iterable<Product> findAllProduct() {
-        return productRepo.findAll();
+        return productRepo.findAllByOrderByProductIdAsc();
     }
 
     public Product findProductById(Long id) {

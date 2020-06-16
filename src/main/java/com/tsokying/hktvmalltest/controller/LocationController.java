@@ -7,8 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.io.IOException;
 
 import static com.tsokying.hktvmalltest.controller.ErrorController.getResponseEntity;
 
@@ -26,6 +28,11 @@ public class LocationController {
         if (errorMap != null) return errorMap;
         Location newLocation = locationService.addOrUpdateLocation(location);
         return new ResponseEntity<>(newLocation, HttpStatus.CREATED);
+    }
+
+    @PostMapping(value = "/upload", consumes = "multipart/form-data")
+    public void uploadProductData(@RequestParam("file") MultipartFile file) throws IOException {
+        locationService.saveAll(CsvUtils.read(Location.class, file.getInputStream()));
     }
 
     @GetMapping("/all")

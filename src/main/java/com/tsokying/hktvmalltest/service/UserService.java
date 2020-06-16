@@ -16,7 +16,7 @@ public class UserService {
     }
 
     public Iterable<User> findAllUser() {
-        return userRepo.findAll();
+        return userRepo.findAllByOrderByUserIdAsc();
     }
 
     public User findUserById(Long id) {
