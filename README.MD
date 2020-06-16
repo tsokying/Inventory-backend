@@ -20,7 +20,7 @@ with [maven installed](https://www.mkyong.com/maven/how-to-install-maven-in-wind
 ```sh
 $ cd Inventory-backend
 ($ mvn install)
-$ mvn spring-boot: run   or $ java -jar target\hktvmalltest-0.0.1-SNAPSHOT.jar
+$ java -jar target\hktvmalltest-0.0.1-SNAPSHOT.jar
 ```
 the application with run on port 8080 by default
 
